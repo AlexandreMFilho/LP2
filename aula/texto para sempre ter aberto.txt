@@ -1,0 +1,67 @@
+try
+catch
+get
+throw(s)
+http://152.92.236.11/javadocs/api/index.html
+#==========scan=============#
+°import java.io.*;
+°BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+°Pegar_INT = Integer.parseInt(stdin.readLine());
+
+#========Herança===========#
+°public class ... extends ... {}
+°super() //usado para herdar os intens do pai
+CSL java (ver no pai dos burros, vulgo google)
+#=======Comandos===========#
+°mcedit
+
+#======instanceof=========#
+°nome_da_class.instanceof(Nome_da_herança)= True/False
+°checa a herança da classe
+
+class Xande extends Alexandre Implements Idade{}... //classe que herda e implementa uma função interface.
+#==========================#
+
+
+https://isjavado.wordpress.com/2012/03/16/como-criar-minha-propria-biblioteca-em-java/
+
+hash table
+
+
+Exceptions ********************************************
+
+fork();
+
+try {
+    tenta isso
+}catch (Exceção var){
+    tratar as exceções
+}
+
+/**
+* @throws @param
+*
+*
+*/
+
+dados interface
+instanceof
+Mulher alguem = new Mulher("Celia","data",80,1.5);
+System.out.print(alguem instanceof Pessoa);//true
+
+ArrayList();
+
+server , dentro da class coloca os throws .
+usuario, dentro da main, usa os try catch
+
+
+path
+
+package
+
+Classe singleton //classe com constructor private, possui metodo q retorna uma referencia da propria classe.
+https://www.devmedia.com.br/padrao-de-projeto-singleton-em-java/26392
+
+
+Programação Concorrente(orientada a eventos):
+action performed3

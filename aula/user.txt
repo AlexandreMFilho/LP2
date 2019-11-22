@@ -1,0 +1,39 @@
+ssh lpii39@152.92.236.11
+dybr2QJP
+
+ls - al
+ls
+logout
+exit
+passwd //mudar senha
+ move arquivo p server - baixar o winscp
+ sftp
+
+ cd ~lp2/ 
+
+
+ Comandos SCP:
+
+     call - Executa o comando shell arbitrário remoto;
+     cd - Muda o diretório de trabalho remoto;
+     chmod - Alterações nas permissões de arquivos remotos;
+     close - Fecha todas as sessões e termina o programa;
+     exit - Fecha sessão;
+     get - Downloads de arquivo do diretório remoto para o diretório local;
+     help - Exibe o help;
+     keepuptodate - Continuamente reflete mudanças no diretório local em um remoto;
+     lcd - Alterações no diretório local de trabalho;
+     lls - Lista o conteúdo do diretório local;
+     ln - Cria link simbólico remoto;
+     lpwd - Imprime diretório local de trabalho;
+     ls - Lista o conteúdo do diretório remoto;
+     mkdir - Cria diretório remoto;
+     mv - Move ou renomeia arquivos remotos;
+     open - Conecta ao servidor;
+     option - Configura ou mostra o valor das opções de roteiro;
+     put - Uploads de arquivos do diretório local ao diretório remoto;
+     pwd - Imprime diretório de trabalho remoto;
+     rm - Remove arquivos remotos;
+     rmdir - Remove diretório remoto;
+     session - Listas de sessões conectadas ou seleciona sessão ativa;
+     synchronize - Sincroniza diretório remoto com um local.

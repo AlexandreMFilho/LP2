@@ -7,18 +7,38 @@ public class Testes{
         this.nome = a;
         this.num = b;
     }
-    public static Comparator Comp = new Comparator(){
-        public int comparen(Object a,Object b){
-            double n1,n2;
-            n1 = (double)a.getnum();
-            n2 = (double)b.getnum();
-            return (int)n1-n2;
-        }
-        public int compares(Object a,Object b){
-
+    public String getNome(){
+        return this.nome;
+    }
+    public double getnum(){
+        return this.num;
+    }
+public static class Comparators{
+    public static Comparator<Testes> C_alf = new Comparator<Testes>(){
+        @Override
+        public int compare(Testes p1,Testes p2){
+            String a,b;
+            a = (String) p1.getNome();
+            b = (String) p2.getNome();
+            return a.compareTo(b);
         }
     };
-
+    public static Comparator<Testes> C_num = new Comparator<Testes>(){
+        @Override
+        public int compare(Testes p1,Testes p2){
+            double a,b;
+            a = p1.getnum();
+            b = p2.getnum();
+            if(a>b){
+                return 1;
+            }else if(a<b){
+                return -1;
+            }else{
+                return 0;
+            }
+        }
+    };
+}
     public static void main(String[] args){
     String a,b,c,d,e;
     //String[] vetl = null;
@@ -56,7 +76,9 @@ public class Testes{
     lista3.add(n2);
 
     System.out.println(lista1);
-    Collections.sort(lista1,Comp);
+    Collections.sort(lista1,Comparators.C_alf);
     System.out.println("DPS DE ORDENAR-------->"+lista1);
+    Collections.sort(lista1,Comparators.C_num);
+    System.out.println("DPS DE ORDENAR 2-------->"+lista1);
     }
 }

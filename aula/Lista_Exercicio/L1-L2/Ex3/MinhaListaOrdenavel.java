@@ -18,21 +18,78 @@ public class MinhaListaOrdenavel implements Comparator{
         lista.add(p);
     }
     public PessoaIMC get(int i){
-        return lista.get(i);
+        return this.lista.get(i);
     }
-    @override
-    public int compare(PessoaIMC p1,PessoaIMC p2){
-        double pf1,pf2;
-        pf2 = (PessoaIMC) p2.getPeso();
-        pf1 = (PessoaIMC) p1.getPeso();
-        return (int)Math.round(pf2-pf1);
-    }
+    public static class Comparator{
 
-    public void ordena(ArrayList lista,int num){
-        colec = lista;
+        public static Comparator<PessoaIMC> C_peso = new Comparator<PessoaIMC>(){
+            @Override
+            public int compare (PessoaIMC p1,PessoaIMC p2){
+                double pf1,pf2;
+                pf2 = (PessoaIMC) p2.getPeso();
+                pf1 = (PessoaIMC) p1.getPeso();
+                if(pf1 - pf2 >= 0){
+                    return 10;
+                }else if(pf1 - pf2 <= 0){
+                    return -10;
+                }else{
+                    return 0;
+                }
+            }
+        }
+        public static Comparator<PessoaIMC> C_altura = new Comparator<PessoaIMC>(){
+            @Override
+            public int compare (PessoaIMC p1,PessoaIMC p2){
+                double pf1,pf2;
+                pf2 = (PessoaIMC) p2.getaltura();
+                pf1 = (PessoaIMC) p1.getaltura();
+                if(pf1 - pf2 >= 0){
+                    return 10;
+                }else if(pf1 - pf2 <= 0){
+                    return -10;
+                }else{
+                    return 0;
+                }
+            }
+        }
+        public static Comparator<PessoaIMC> C_nome = new Comparator<PessoaIMC>(){
+            @Override
+            public int compare (PessoaIMC p1,PessoaIMC p2){
+                String a,b;
+                a = p1.getNome();
+                b = p2.getNome();
+                return a.compareTo(b);
+            }
+        }
+        public static Comparator<PessoaIMC> C_genM = new Comparator<PessoaIMC>(){
+            @Override
+            public int compare (PessoaIMC p1, PessoaIMC p2){
+                if(p1 Intanceof Mulher &&(!(p2 Intanceof Mulher))){
+                    return -10;
+                }else if(!(p1 Instanceof Mulher) && p2 Intanceof Mulher){
+                    return 10;
+                }else{
+                    return 0;
+                }
+            }
+        }
+        public static Comparator<PessoaIMC> C_genH = new Comparator<PessoaIMC>(){
+            @Override
+            public int compare (PessoaIMC p1, PessoaIMC p2){
+                if(p1 Intanceof Homem &&(!(p2 Intanceof Homem))){
+                    return -10;
+                }else if(!(p1 Instanceof Homem) && p2 Intanceof Homem){
+                    return 10;
+                }else{
+                    return 0;
+                }
+            }
+        }
+    }
+    public ArrayList ordena(final int num){
         switch(num){
             case 1: //Alfabetica
-
+                Collections.sort(lista,Comparators.C_nome);
                 break;
             case 2: //Alfabetica Invertida
 

@@ -1,3 +1,4 @@
+package L1L2.Ex2.classes;
 public abstract class PessoaIMC extends Pessoa{
     double peso;
     double altura;

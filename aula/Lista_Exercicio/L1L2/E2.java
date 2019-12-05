@@ -1,13 +1,14 @@
 import java.io.*;
 import java.util.*;
+import L1L2.Ex2.classes.*;
 
-public class Imc{
+public class E2{
     public static void main(String[] args){
         Homem man;
         Mulher woman;
         String[] palavras;
         String linha, name, date;
-        int qtd = 0 ,i = 0, inb = 0, iio = 0, ig = 0;
+        int qtd = 0 ,i = 0, inb = 0, iio = 0, ig = 0, cont = 0;
         double peso, altura;
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         ArrayList lista = null;
@@ -32,10 +33,10 @@ public class Imc{
                }
            }
 
-
+    while(inb <= 3 || iio <= 3){
         try{
             for(i = 0; i < qtd;i++){
-                System.out.print("\nInserir homem (h) ou mulher(m) nº"+(i+1)+": ");
+                System.out.print("\nInserir homem (h) ou mulher(m): ");
                 linha = in.readLine();
 
                 if(linha.equalsIgnoreCase("H")){
@@ -50,6 +51,7 @@ public class Imc{
 
                     man = new Homem(name,date,peso,altura);
                     lista.add(man);
+                    cont +=1;
                 }
 
                 else if (linha.equalsIgnoreCase("M")){
@@ -64,35 +66,39 @@ public class Imc{
 
                     woman = new Mulher(name,date,peso,altura);
                     lista.add(woman);
+                    cont +=1;
                 }
-
                 else{
                     System.out.println("---Opçao Invalida!\nTente:\n(h) para homem.\n(m) para mulher.\n");
                     i--;
                     ig++;
                 }
-                if(inb > 2 || iio > 2 || ig > 2){
-                    System.out.print("\nTentativas excedidas.\nEncerrando aplicaçao...\n");
-                    System.exit(1);
-                }
             }
+
             System.out.println(lista.toString());
 
         }catch(NumberFormatException nb){
             System.out.println("Erro. "+ nb +"\nValor inserido nao e numerico. Reiniciando aplicaçao.");
             inb++;
-            i--;
         }catch(IOException io){
             System.out.println("Erro de entrada. "+ io +"\nReiniciando aplicação.");
             iio++;
-            i--;
         }catch(NullPointerException np){
             System.out.print("Erro."+np+"\nPonteiro nulo.");
             System.exit(1);
         }
         catch(Exception e){
-            System.out.println("Erro Inesperado. \nEncerrando aplicação.");
+            System.out.println("Erro Inesperado."+e+" \nEncerrando aplicação.");
             System.exit(1);
         }
+        if(inb > 2 || iio > 2 || ig > 2){
+            System.out.print("\nTentativas excedidas.\nEncerrando aplicaçao...\n");
+            System.exit(1);
+        }
+        if(cont == qtd){
+            System.exit(0);
+        }
+
     }
+}
 }

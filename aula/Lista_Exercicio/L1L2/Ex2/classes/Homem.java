@@ -1,3 +1,4 @@
+package L1L2.Ex2.classes;
 public class Homem extends PessoaIMC{
 
     public Homem(String name, String date, double weight, double height){

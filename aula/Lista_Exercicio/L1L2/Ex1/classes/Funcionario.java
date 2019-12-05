@@ -1,3 +1,5 @@
+package L1L2.Ex1.classes;
+
 public class Funcionario {
   //_________________________________________ATRIBUTOS:
   protected String nome;

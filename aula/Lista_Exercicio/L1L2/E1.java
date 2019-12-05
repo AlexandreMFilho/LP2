@@ -1,10 +1,12 @@
 import java.io.*;
 import java.util.*;
-public class Ex4 {
+import L1L2.Ex1.classes.*;
+
+public class E1 {
   int num;
   BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
   //_________________________________________CONSTRUCTOR:
-  public Ex4(int x){
+  public E1(int x){
     setnum(x);
 
   }
@@ -84,7 +86,7 @@ public class Ex4 {
     d = a.split(" ");
     c = Integer.parseInt(d[0]);
 
-    Ex4 instancia = new Ex4(c);
+    E1 instancia = new E1(c);
     instancia.calculaSalario();
   }
 }
